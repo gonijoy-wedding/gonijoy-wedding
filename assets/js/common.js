@@ -31,15 +31,15 @@ $(document).ready(function() {
         $('.current').text(slick.currentSlide + 1);
         $('.total').text(slick.slideCount);
     })
-    .slick({
-        autoplay: false,
-        autoplaySpeed: 3000,
-        infinite: true,
-        arrows: true
-    })
-    .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-        $('.current').text(nextSlide + 1);
-    });
+        .slick({
+            autoplay: false,
+            autoplaySpeed: 3000,
+            infinite: true,
+            arrows: true
+        })
+        .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            $('.current').text(nextSlide + 1);
+        });
 
     //wedding d-day calc
     var Dday = new Date(2022, 11, 10);    // D-day(2022년 12월(-1) 10일)를 셋팅한다.
@@ -137,7 +137,6 @@ $(document).ready(function() {
     });
 
     //bgm
-
     function bgm_player() {
         var bgm = document.getElementById("skin_bgm");
 
