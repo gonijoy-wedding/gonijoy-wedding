@@ -48,7 +48,13 @@ $(document).ready(function() {
     var gap = now.getTime() - Dday.getTime();
     var result = Math.floor(gap / (1000 * 60 * 60 * 24)) * -1;
 
-    $('#weddingDay').html(result);
+    if(result > 0){
+        $('#weddingDay').html('D-' + result);
+    }else if(result == 0) {
+        $('#weddingDay').html('D-day');
+    }else if(result < 0) {
+        $('#weddingDay').html('D+' + result);
+    }
 
     //bank accordion
     $('.main-thx__box-title').each(function(){
